@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  color: black;
+}
+
+path,
+i,
+svg {
+  pointer-events: none;
+}
+
+.colors {
+  display: flex;
+  min-height: 80vh;
+  color: rgb(172, 169, 169);
+}
+
+.color {
+  display: flex;
+  flex: 1;
+  height: 80vh;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.color h2 {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.sliders {
+  /* opacity: 0; */
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0%;
+  background: white;
+  width: 80%;
+  padding: 1rem;
+  border-top-left-radius: 1.2rem;
+  border-top-right-radius: 1.2rem;
+  /* transform: translateY(100px); */
+  transition: all ease-in 0.5s;
+  /* pointer-events: none; */
+}
+
+.sliders.active {
+  opacity: 1;
+  transform: translateY(0px);
+  pointer-events: all;
+}
+
+.sliders button {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  padding: 0.5rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border: none;
+  background: rgb(82, 81, 81);
+  color: white;
+  cursor: pointer;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+}
+
+.panel {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 20vh;
+}
+
+.panel button {
+  padding: 1rem;
+  margin: 1.5rem;
+  border: none;
+  background: rgb(26, 26, 71);
+  color: white;
+  border-radius: 0.8rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.library-panel,
+.generate-panel,
+.save-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.adjust,
+.lock {
+  font-size: 2rem;
+  border: none;
+  background: none;
+  margin: 2rem 0rem;
+  cursor: pointer;
+  background: none;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+}
